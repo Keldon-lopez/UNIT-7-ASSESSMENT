@@ -1,0 +1,21 @@
+Results for the tinyArray
+insert 38.3 μs
+append 76.7 μs
+
+Results for the smallArray
+insert 57.9 μs
+append 96.4 μs
+
+Results for the mediumArray
+insert 204.4 μs
+append 153.8 μs
+
+Results for the largeArray
+insert 9.0345 ms
+append 726 μs
+
+Results for the extraLargeArray
+insert 871.0564 ms
+append 2.8829 ms
+
+Append (push) scales better as the data in the array grows. You can see that with small Arrays insert (unshift) works faster than append. After doing some additional research on this the reason has to do with computational complexity for push and unshift. Push has a Constant Time Complexity as all it does is add an index to the array and then adds the value so the size of the array doesn't affect this operation much. Unshift has a Linear Time Complexity as it wants to make what ever value is added index(0), this means every index has be to shifted as many times as there are values added to the array making it so that it will take longer as the array grows larger, this makes it scale linearly 
