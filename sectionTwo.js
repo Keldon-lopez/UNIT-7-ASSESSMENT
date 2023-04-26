@@ -12,8 +12,8 @@ const addToZero = (array) => {
 };
 console.log("addToZero", addToZero([1, 2, 3, -2]));
 
-// I believe the runtime for this is going to be around 80 μs
-// this has a space complexity of O(N) because it scales linearly with the size of the array. The larger the array the longer it takes to loop.
+// O(N^2)
+// this has a space complexity of O(N^2) because it scales linearly with the size of the array. The larger the array the longer it takes to loop.
 
 const hasUniqueChars = (word) => {
   let wordArr = word.split("");
@@ -32,8 +32,8 @@ const hasUniqueChars = (word) => {
 };
 console.log("hasUniqueChars", hasUniqueChars("Moonday"));
 
-// I believe the runtime for this is going to be around 300 μs
-// this has a space complexity of O(N) because it scales linearly with the size of the string. It turns the string into an array and then loops through it. The bigger the array the longer it takes to loop through it.
+// O(N^2)
+// this has a space complexity of O(N^2)  because it scales linearly with the size of the string. It turns the string into an array and then loops through it. The bigger the array the longer it takes to loop through it.
 
 const isPangram = (string) => {
   let alpha = [
@@ -80,7 +80,7 @@ console.log(
   isPangram("The quick brown fox jumps over the lazy dog!")
 );
 
-// I believe the runtime for this is going to be around 100 μs
+// O(N)
 // this has a space complexity of O(N) because it scales linearly with the size of the string. It turns the string into an array and then loops through it. The bigger the array the longer it takes to loop through it.
 
 const findLongestWord = (array) => {
@@ -96,5 +96,5 @@ const findLongestWord = (array) => {
 }
 console.log('findLongestWord', findLongestWord(["hi", "hello"]));
 
-// I believe the runtime for this is going to be around 100 μs
+// O(N)
 // this has a space complexity of O(N) because it scales linearly with the size of the array. The larger the array the longer it takes to loop.
